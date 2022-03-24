@@ -1,0 +1,51 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+.main-header {
+    text-align: center;
+    font-family: cursive;
+}
+.flex-container {
+    margin: auto;
+    width: 630px;
+    display: flex;
+    flex-flow: row wrap;
+    color: wheat;
+    font-size: 1em;
+
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: cursive;
+    border-radius: 30px;
+    position: absolute;
+}
+.front {
+    background-color: darkslategray;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    background-color: darkcyan;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.container:hover .card {
+    transform: rotateY(180deg);
+}
